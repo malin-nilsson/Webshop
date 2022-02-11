@@ -1,0 +1,173 @@
+@use "../fonts";
+@use "../variables";
+@use "../mixins";
+
+
+footer {
+  background-color: #111111;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+
+  @include mixins.tablet-only {
+    text-align: center;
+  }
+
+  @include mixins.desktop-only {
+    text-align: center;
+    padding: 30px 0px 40px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    &:hover {
+      color: #3fc1c9;
+      text-decoration: none;
+    }
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 150px;
+      width: auto;
+      padding: 10px 0px 30px;
+    }
+  }
+
+  input {
+    border-radius: 10px;
+    outline: 1px solid #8995a3;
+    height: 30px;
+    width: 100%;
+    border: none;
+    padding: 20px 40px 20px 10px;
+    font-weight: 600px;
+    background-color: #111111;
+    color: white;
+    font-size: 10pt;
+
+    &:focus {
+      outline: none;
+      border-color: #9ecaed;
+      box-shadow: 0 0 10px #9ecaed;
+    }
+
+    @include mixins.tablet-only {
+      width: 400px;
+    }
+
+    @include mixins.desktop-only {
+      width: 400px;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 10px 0px 20px;
+
+    @include mixins.desktop-only {
+      font-size: 1rem;
+    }
+  }
+
+  .button-newsletter {
+    background-color: #fff;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #3fc1c9;
+      color: #000;
+    }
+  }
+
+  button {
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 50%;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 10px 0px 20px;
+
+    @include mixins.tablet-only {
+      width: unset;
+      margin: 10px 10px 20px;
+    }
+
+    @include mixins.desktop-only {
+      width: unset;
+      margin: 5px 10px 30px;
+    }
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0px 0px 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 7px;
+    justify-content: center;
+
+    @include mixins.tablet-only {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 20px 0px 2px;
+    }
+
+    @include mixins.desktop-only {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0px 8px;
+    }
+
+    section {
+      color: white;
+      line-height: 1.4rem;
+      padding: 8px 0px 0px;
+      font-size: 0.85rem;
+
+      @include mixins.tablet-only {
+        padding: 0;
+        text-align: left;
+      }
+
+      @include mixins.desktop-only {
+        padding: 0;
+        text-align: left;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    section:last-child span {
+      display: inline;
+    }
+
+    .bi {
+      font-size: 2rem;
+      padding: 0px 10px;
+
+      &:hover {
+        color: #3fc1c9;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;900&display=swap');
+
+$primary-font: "Montserrat", sans-serif;
+
+$secondary-font: "Playfair Display", serif;
+
+body {
+  font-family: $primary-font;
+}

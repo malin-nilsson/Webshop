@@ -1,0 +1,34 @@
+@use "mixins";
+@use "variables";
+@use "fonts";
+@use "elements/checkout";
+@use "elements/footer";
+@use "elements/header";
+@use "elements/landingpage-gallery";
+@use "elements/landingpage-hero";
+@use "elements/shoppingcart";
+@use "elements/product";
+@use "elements/modal";
+@use "elements/confirmation";
+
+* {
+box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+
+    @include mixins.tablet-only {
+        background-color: #fff;
+    }
+    @include mixins.desktop-only {
+        background-color: #fff;
+    }
+ 
+}

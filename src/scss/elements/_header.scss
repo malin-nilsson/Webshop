@@ -1,0 +1,346 @@
+@use "../variables";
+@use "../mixins";
+@use "../fonts";
+
+body {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 14vh;
+
+  .headerWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-right: 0px;
+
+
+    .bi.bi-cart,
+    .bi.bi-search {
+      color: white;
+      margin-right: 3px;
+      font-size: 18pt;
+      cursor: pointer;
+
+      &:hover {
+        color: #3fc1c9;
+      }
+    }
+  }
+
+  .item-amount {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: #3fc1c9;
+    border-radius: 50%;
+    // margin-right: 10px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+
+  }
+
+  .cart {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+  .logoContainer {
+    min-width: 125px;
+    max-width: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: variables.$color-lightgrey;
+    font-size: 15pt;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 30px;
+
+    img{
+      width: 100%;
+    }
+
+  }
+
+}
+
+.inputContainer {
+  display: none;
+}
+
+.contact {
+  display: none;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 100px;
+  transition: all .5s ease-in-out;
+}
+
+// hamburgarmeny
+.menu-btn {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-btn__burger {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
+
+// animation till burgaren
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(50px);
+  background: transparent;
+  box-shadow: none;
+  z-index: 4;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+
+
+//dropdown-menyn till burgaren
+.burgerStyle {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 11pt;
+  color: #fff !important;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+
+  li {
+    display: flex;
+    padding-left: 20px;
+    padding: 8px;
+    padding-left: 30px;
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff !important;
+
+    a {
+      display: flex;
+      width: 100%;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:hover {
+      border-left: 4px solid #3fc1c9;
+    }
+
+    span {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding-right: 20px;
+    }
+  }
+}
+
+
+
+ul {
+  display: none;
+}
+
+
+@include mixins.tablet-only {
+  header {
+    display: flex;
+
+    .inputContainer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 50px;
+      height: 100%;
+    }
+
+    .headerWrapper {
+      width: 80%;
+      margin-right: 0px;
+      margin-left: 20px;
+    }
+
+    .bi.bi-search {
+      margin-left: -30px;
+      font-weight: bold;
+      font-size: 14pt;
+      color: #8995a3;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+
+    }
+
+    input {
+      border-radius: 10px;
+      outline: 1px solid #8995a3;
+      height: 30px;
+      border: none;
+      padding: 17px 70px;
+      font-weight: 600px;
+      background-color: rgba(17, 17, 17, 0.0);
+      color: white;
+      font-size: 10pt;
+      padding: 10px 70px 10px 10px;
+      width: 350px;
+
+      &:focus {
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 10px #9ecaed;
+      }
+
+
+
+    }
+
+  }
+
+  .headerWrapper .bi.bi-search {
+    display: none;
+  }
+
+  ::placeholder {
+    color: #8995a3;
+  }
+
+
+  //slut på tablet-query
+}
+
+
+@include mixins.desktop-only {
+
+
+  .inputContainer {
+    width: 55%;
+  }
+
+  input {
+    padding: 12px 70px 12px 10px;
+  }
+
+  header {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .headerWrapper {
+      justify-content: space-evenly;
+      width: 28%;
+      *{
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .dropdownWrapper{
+    position: fixed;
+    width: 100%;
+    padding-top: 14vh;
+    z-index: 10;
+  }
+
+  .contact {
+    display: inline-block;
+    color: white;
+    margin: 0px 20px 0px 0px;
+    font-family: fonts.$primary-font;
+    cursor: pointer;
+    font-size: 12pt;
+    font-weight: 500;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        color: #3fc1c9;
+      }
+    }
+
+    &:hover {
+      color: #3fc1c9;
+    }
+
+  }
+nav {
+  height: unset;
+}
+
+  //slut på desktop-query
+}

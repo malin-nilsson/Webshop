@@ -1,0 +1,220 @@
+@use "../fonts";
+@use "../variables";
+@use "../mixins";
+
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+    color: white !important;
+    text-align: center;
+    border: none;
+    margin: 45% auto;
+    padding: 20px;
+    width: 90%;
+    z-index: 5;
+    -webkit-animation-name: animatemodal;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animatemodal;
+    animation-duration: 0.8s;
+
+    .modalContent {
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      background-color: black;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 4px;
+      color: white;
+      border: none;
+      margin: 15% auto;
+      padding: 20px;
+      width: 40%;
+      -webkit-animation-name: animatemodal;
+      -webkit-animation-duration: 0.8s;
+      animation-name: animatemodal;
+      animation-duration: 0.8s;
+
+      p {
+        display: flex;
+        justify-content: center;
+        font-size: 17pt;
+        margin-top: 15px;
+      }
+      /* Add Animation */
+      @-webkit-keyframes animatemodal {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes animatemodal {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+  
+        a {
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px 21px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            text-align: center;
+            width: 40%;
+            margin: 15px auto;
+        }
+
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    @include mixins.tablet-only {
+      margin: 15% auto;
+      width: 60%;
+    }
+
+    @include mixins.desktop-only {
+      margin: 10% auto;
+      padding: 20px;
+      width: 40%;
+    }
+
+    a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 8px 21px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      width: 40%;
+
+      @include mixins.tablet-only {
+        font-size: 0.9rem;
+      }
+    }
+
+    .modalHeader {
+      text-align: center;
+      font-size: 1.3rem;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      @include mixins.desktop-only {
+        gap: 20px;
+      }
+        .closeWrapper{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .bi-x {
+            color: white;
+            text-align: right;
+            font-size: 2.4rem;
+            // margin-right: 10px;
+            margin-top: -10px;
+            opacity: 1;
+        }
+
+        .bi-x:hover,
+        .bi-x:focus {
+            text-decoration: none;
+            cursor: pointer;
+            color: #67ced4;
+            opacity: 1;
+        }
+    }
+
+    .button-shop {
+      background-color: #fff;
+      color: #000 !important;
+      padding: 12px 7px;
+      transition: 0.2s;
+      width: 70%;
+
+      &:hover {
+        background-color: #53e1e9 !important;
+      }
+
+      @include mixins.desktop-only {
+        width: 180px;
+      }
+    }
+
+    .button-buy {
+      background-color: #3fc1c9;
+      color: #000 !important;
+      padding: 12px 0px;
+      transition: 0.2s;
+      width: 70%;
+
+      &:hover {
+        background-color: #53e1e9;
+      }
+
+      @include mixins.desktop-only {
+        width: 180px;
+      }
+    }
+
+    .bi-x {
+      color: white;
+      text-align: right;
+      font-size: 2.4rem;
+      cursor: pointer;
+    }
+
+  }
+}
+.gif {
+    background-image: url("../assets/giphy.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 200px;
+    margin: 0px 40px;
+
+    @include mixins.tablet-only {
+      height: 400px;
+    }
+    @include mixins.desktop-only {
+      height: 400px;
+    }
+}

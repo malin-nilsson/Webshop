@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+        integrity="sha384-tKLJeE1ALTUwtXlaGjJYM3sejfssWdAaWR2s97axw4xkiAdMzQjtOjgcyw0Y50KU" crossorigin="anonymous" />
+    <script src="ts/product.ts" type="module"></script>
+    <link href="scss/main.scss" rel="stylesheet">
+    <title>Produktdetaljer</title>
+</head>
+
+<body>
+    <header>
+        <div class="logoContainer">
+            <a href="index.html">
+                <img src="assets/LoggaLiteStorreSlogan.png" id="homeButton" />
+            </a>
+        </div>
+        <div class="inputContainer">
+            <form>
+                <input type="text" placeholder="Sök kick..." />
+                <i class="bi bi-search"></i>
+            </form>
+        </div>
+        <div class="headerWrapper">
+            <i class="bi bi-search"></i>
+            <h5 class="contact" id="aboutButton"><a href="index.html#about">Om oss</a></h5>
+            <h5 class="contact" id="contactButton"><a href="index.html#contact">Kontakt</a></h5>
+            <a href="shoppingcart.html" class="cart"><i class="bi bi-cart" id="shoppingCart"></i>
+            <span class="item-amount"></span></a>
+
+            <div class="menu-btn" id="hamburgare">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+    </header>
+    <div class="dropdownWrapper">
+        <ul id="burgerDropdown">
+            <li><a href="index.html#popular-products">Upplevelser<span><i class="bi bi-arrow-right"></i></span></a></li>
+            <li>Presentkort<span><i class="bi bi-arrow-right"></i></span></li>
+            <li>Julklappar<span><i class="bi bi-arrow-right"></i></span></li>
+            <li>Platser<span><i class="bi bi-arrow-right"></i></span></li>
+            <li>Weekend<span><i class="bi bi-arrow-right"></i></span></li>
+        </ul>
+    </div>
+
+    <main>
+     
+        <div class="wrapper-productpage">
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-logo">
+            <img src="assets/LoggaLiteStorreSlogan.png" />
+        </div>
+        <h3>Få vårt nyhetsbrev</h3>
+        <p>Prenumerera på vårt nyhetsbrev och få förtur till nya upplevelser och unika erbjudanden.</p>
+        <input type="text" placeholder="Din e-postadress"><button type="button" class="button-newsletter">Prenumerera</button>
+         <div class="footer-container" id="footer">
+                     <section>
+                 <span>
+                     <i class="bi bi-instagram"></i>
+                 </span>
+                 <span>
+                     <i class="bi bi-twitter"></i>
+                 </span>
+                 <span>
+                     <i class="bi bi-facebook"></i>
+                 </span>
+             </section>
+         </div>
+         <p><a href="mailto:kontakt@99kicks.com">kontakt@99kicks.com</a></p>
+         </footer>
+</body>
+
+</html>

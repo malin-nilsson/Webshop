@@ -1,0 +1,19 @@
+{
+  "name": "webshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel src/index.html src/product.html src/shoppingcart.html src/checkout.html src/confirmation.html --no-cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.3.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.1"
+  }
+}

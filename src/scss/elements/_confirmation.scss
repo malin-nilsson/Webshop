@@ -1,0 +1,87 @@
+@use "../fonts";
+@use "../variables";
+@use "../mixins";
+
+
+
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/mountains.jpg");
+    /* Set a specific height */
+    height: 60vh;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @include mixins.tablet-only {
+        height: 70vh;
+    }
+
+    @include mixins.desktop-only {
+        height: 95vh;
+    }
+}
+
+/* Place text in the middle of the image */
+.hero-confirmation-text {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 100%;
+
+    @include mixins.tablet-only {
+        top: 15%;
+    }
+
+    @include mixins.tablet-only {
+        top: 30%;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        width: 100%;
+
+        @include mixins.tablet-only {
+            font-size: 3.5rem;
+            margin: 10px;
+        }
+    }
+
+    .confirmation-button {
+        padding: 50px 0px 0px;
+
+        @include mixins.tablet-only {
+            padding: 20px 0px 0px;
+        }
+
+        @include mixins.desktop-only {
+            padding: 20px 0px 0px;
+            margin: 20px;
+        }
+
+    }
+
+    .back-to-startpage-button {
+        text-decoration: none;
+        font-weight: 500;
+        color: #fff;
+        background-color: #000;
+        border-radius: 8px;
+        padding: 13px 20px;
+        text-transform: uppercase;
+        box-shadow: rgba(0, 0, 0, 0.34) 0px 4px 6px;
+        transition: 0.4s;
+
+        &:hover {
+            background-color: #2f9fa6;
+            color: #000;
+        }
+    }
+}
