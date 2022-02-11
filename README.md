@@ -25,6 +25,6 @@ Visit localhost:1234 to view the project
 - NPM
 
 ## Contributors
-Malin Nilsson
-Michael Miikkulainen
+Malin Nilsson </br>
+Michael Miikkulainen </br>
 Emma Nilsson
