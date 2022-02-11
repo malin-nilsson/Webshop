@@ -23,4 +23,8 @@ Visit localhost:1234 to view the project
 - TypeScript
 - Bootstrap
 - NPM
-- Mobile-first workflow
+
+## Contributors
+Malin Nilsson
+Michael Miikkulainen
+Emma Nilsson
