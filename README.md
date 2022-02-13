@@ -1,5 +1,5 @@
 # Webshop
-School project built with TypeScript. The website features basic functionality such as adding/removing items in the shopping cart.
+Group project in school, built with TypeScript and SASS. The website features basic functionality such as adding/removing items in the shopping cart.
 
 ## Screenshot
 
