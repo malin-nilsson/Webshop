@@ -24,6 +24,11 @@ Visit localhost:1234 to view the project
 - Bootstrap
 - NPM
 
+## Details
+Malin: Worked on shopping functionality such as adding items to cart, removing items, calculating total, as well as clearing shopping cart after purchase. Also created styling and layout for the landing page, product page and shopping cart page.
+Michael: Created the nav bar and mobile hamburger menu. Worked on form validation on checkout page as well as layout for checkout page.
+Emma: Produced our amazing logo, favicon and coded the transitions to our modals.
+
 ## Contributors
 Malin Nilsson </br>
 Michael Miikkulainen </br>
