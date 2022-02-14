@@ -26,7 +26,9 @@ Visit localhost:1234 to view the project
 
 ## Details
 Malin: Worked on shopping functionality such as adding items to cart, removing items, calculating total, and clearing shopping cart after purchase. Also created styling and layout for the landing page, product page and shopping cart page. </br>
+
 Michael: Created the nav bar and mobile hamburger menu. Worked on form validation on checkout page as well as layout for checkout page. </br>
+
 Emma: Produced our amazing logo, favicon and coded the transitions to our modals.
 
 ## Contributors
