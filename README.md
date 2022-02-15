@@ -1,7 +1,7 @@
 # Webshop
 Group school project built with TypeScript and SASS. The website features basic functionality such as adding/removing items in the shopping cart.
 
-During the project we also implemented agile methods, including Scrum.
+During the project we implemented agile methods, including Scrum.
 
 ## Screenshot
 
